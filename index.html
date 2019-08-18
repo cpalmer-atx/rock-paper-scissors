@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <script>
-        
+        function computerPlay() {
+            let move = ["rock", "paper", "scissors"];
+            return move[Math.floor(Math.random() * 3)];
+        }
+        function playRound (playerSelection, computerSelection) {
+
+            let outcomes = ["tie game", "player wins", "computer wins"];
+            var winner;
+
+            if (playerSelection == computerSelection)
+                winner = outcomes[0];
+            else if ((playerSelection == "rock" && computerSelection == "scissors") ||
+                     (playerSelection == "paper" && computerSelection == "rock") ||
+                     (playerSelection == "scissors" && computerSelection == "paper"))
+                winner = outcomes[1];
+            else
+                winner = outcomes[2];
+
+            return winner;
+        }
+
     </script>
 </html>
