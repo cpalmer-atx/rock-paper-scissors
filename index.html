@@ -2,8 +2,10 @@
 <html lang="en">
     <script>
         function computerPlay() {
-            let move = ["rock", "paper", "scissors"];
-            return move[Math.floor(Math.random() * 3)];
+            let choices = ["rock", "paper", "scissors"];
+            let move = choices[Math.floor(Math.random() * 3)];
+            console.log("computer chooses " + move + ".");
+            return move;
         }
         function playRound (playerSelection, computerSelection) {
 
@@ -21,6 +23,9 @@
 
             return winner;
         }
+        let move = prompt("choose rock, paper, or scissors");
+        console.log("you chose " + move + ".");
+        console.log(playRound(move, computerPlay()));
 
     </script>
 </html>
